@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,10 +15,22 @@ class EditProfile extends StatelessWidget {
                 top: 60,
                 left: 15,
               ),
-              child: Row(children: [
-                Image.asset(
-                  'assets/box_left.png',
-                  width: 40,
+              child: Row(
+                children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (context, animation1, animation2) =>
+                          ProfilePage(),
+                          transitionDuration: Duration(seconds: 0)),
+                    );
+                  },
+                  child: Image.asset(
+                    'assets/box_left.png',
+                    width: 40,
+                  ),
                 ),
                 SizedBox(
                   width: 100,

@@ -194,7 +194,7 @@ class CreateAddress extends StatelessWidget {
             thickness: 1,
           ),
           SizedBox(
-            height: 250,
+            height: 180,
           ),
           Container(
             width: 343,
